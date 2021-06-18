@@ -4,7 +4,7 @@ import boto3
 import botocore
 
 
-BUCKET = 'testbucket19053'
+BUCKET = ''
 
 def download_file(file_name, bucket, object_name=None):
     """
@@ -26,10 +26,11 @@ def download_file(file_name, bucket, object_name=None):
     """
     if object_name is None:
         object_name = file_name
-    s3 = boto3.resource('s3')
+        
+    s3 = boto3.client('s3')
 
     try:
-        s3.Bucket(bucket).download_file(file_name, object_name)
+        s3.download_fileobj(bucket, file_name, object_name)
 
     # The file might be corrupted, or might have disappear (which would be strange)
     # so we can catch the error using the try, except error handling

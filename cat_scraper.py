@@ -29,5 +29,5 @@ if elem:
         with tempfile.TemporaryDirectory() as temp_dir:
             for i, scr in enumerate(tqdm(src_list)):
                 urllib.request.urlretrieve(scr, f'{temp_dir}/cat_{i}.png')
-                upload_file(f'{temp_dir}/cat_{i}.png', 'testbucket19053', f'cats/cat_{i}')
+                upload_file(f'{temp_dir}/cat_{i}.png', 'aicoretestcats', f'cats/cat_{i}')
 driver.quit()
