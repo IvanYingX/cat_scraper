@@ -9,3 +9,5 @@ Just a few important notes:
 - Try blocking public access unless you need it
 - If you are working in teams, use the same account, and set up different IAM Users, each user will get a different ID and key, but all will share the same resources
 - If you want a quick solution, refer to the document in the repo about making objects public
+
+![índice](https://user-images.githubusercontent.com/58112372/122594996-0db3de80-d068-11eb-90e8-11b9efde5b36.jpg)
