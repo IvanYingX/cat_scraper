@@ -1,4 +1,6 @@
-# cat_scraper
+# Cute Cat Scraper
+
+I made this repo for demonstration purposes. You can use it as a reference for future projects, but as a disclaimer, it is very basic stuff.
 
 Just a few important notes:
 - Don't forget the credentials! boto3 will look at your ~/.aws/ directory to find the credentials and the configurations
