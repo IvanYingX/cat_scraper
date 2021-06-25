@@ -3,9 +3,6 @@ import logging
 import boto3
 import botocore
 
-
-BUCKET = ''
-
 def download_file(file_name, bucket, object_name=None):
     """
     Downloads a file from an S3 bucket

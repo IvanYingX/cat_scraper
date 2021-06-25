@@ -1,13 +1,15 @@
+#%%
 from selenium import webdriver
 import urllib.request
 from aws_upload import download_file
 from aws_upload import upload_file
 import tempfile
 from tqdm import tqdm
-
+#%%
 # Define the driver
 ROOT = 'https://all-free-download.com/free-photos/cute-cat-jpg.html'
 options = webdriver.ChromeOptions()
+# options.add_argument('--headless')
 options.add_argument("--no-sandbox")
 options.add_argument("disable-infobars")
 options.add_argument("--disable-extensions")
