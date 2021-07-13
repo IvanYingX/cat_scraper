@@ -1,8 +1,9 @@
+#%%
 from botocore.exceptions import ClientError
 import logging
 import boto3
 import botocore
-
+#%%
 def download_file(file_name, bucket, object_name=None):
     """
     Downloads a file from an S3 bucket
@@ -39,7 +40,7 @@ def download_file(file_name, bucket, object_name=None):
             raise
 
 
-
+#%%
 def upload_file(file_name, bucket, object_name=None):
     """
     Upload a file to an S3 bucket
@@ -70,3 +71,4 @@ def upload_file(file_name, bucket, object_name=None):
         logging.error(e)
         return False
     return True
+# %%
