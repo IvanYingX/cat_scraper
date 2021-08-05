@@ -1,9 +1,9 @@
 #%%
 from selenium import webdriver
 import urllib.request
-# from aws_upload import download_file
-# from aws_upload import upload_file
-# import tempfile
+from aws_upload import download_file
+from aws_upload import upload_file
+import tempfile
 from tqdm import tqdm
 import os
 if not os.path.exists('cats'):
@@ -31,9 +31,9 @@ if elem:
             except:
                 print('No source found')
         # Create a temporary directory, so you don't store images in your local machine
-        # with tempfile.TemporaryDirectory() as temp_dir:
-        for i, scr in enumerate(tqdm(src_list)):
-            urllib.request.urlretrieve(scr, f'cats/cat_{i}.png')
-                # upload_file(f'{temp_dir}/cat_{i}.png', 'aicoretestcats', f'cats/cat_{i}')
+        with tempfile.TemporaryDirectory() as temp_dir:
+            for i, scr in enumerate(tqdm(src_list)):
+                urllib.request.urlretrieve(scr, f'{temp_dir}/cat_{i}.png')
+                upload_file(f'{temp_dir}/cat_{i}.png', 'aicoreassessments', f'cats/cat_{i}.png')
 driver.quit()
 # %%

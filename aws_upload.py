@@ -72,3 +72,10 @@ def upload_file(file_name, bucket, object_name=None):
         return False
     return True
 # %%
+
+if __name__ =='__main__':
+    s3_client = boto3.client('s3')
+    # with open('card_2.py', 'wb') as f:
+    #     s3_client.download_fileobj('aicoreassessments', 'BlackJack/Card.py', f)
+    s3_client.download_file('aicoreassessments', 'BlackJack/Card.py', 'card_3.py')
+    # response = s3_client.upload_file('add_user.png', 'aicoreassessments', 'add_user.png')
